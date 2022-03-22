@@ -18,7 +18,7 @@ if (count($invite)>0)
 <br><br><br>
 
 <div id="rechercher1">
-  <h2>Liste des Prospects</h2> 
+  <h2>Liste des Particpants</h2> 
  
   </div>
 <br>
@@ -29,7 +29,7 @@ if (count($invite)>0)
           <th>Type</th>
           <th>Nom</th>
           <th>Prénom</th>
-          <th>Nom hébraique</th>
+          <!-- <th>Nom hébraique</th> -->
           <!-- <th>Nom hébraique des parents</th> -->
           <th>Email</th>
           <th>Modifier</th>
@@ -62,7 +62,7 @@ if (count($invite)>0)
             <td><?php echo $invite[$i]["nom"] ?></td>
             <td><?php echo $invite[$i]["prenom"]?></td>
             <!-- <td><?php echo $invite[$i]["Nom_hebraique_Parents"]?></a></td> -->
-            <td><?php echo $invite[$i]["Nom_Hebraique"]?></td>
+            <!-- <td><?php echo $invite[$i]["Nom_Hebraique"]?></td> -->
             <td><?php echo $invite[$i]["Email"]?></td>
             <td><a href='../php/modifier.php?ID=" <?php echo $invite[$i]["Id_part"] ?>"'>Modifier</a></td>
             <td><a href='../php/ajouter_Dons.php?ID="<?php echo $invite[$i]["Id_part"] ?>"'>Ajouter</td>

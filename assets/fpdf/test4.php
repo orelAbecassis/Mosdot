@@ -1,6 +1,6 @@
 <?php
 require("fpdf/fpdf.php");
-$db = new PDO('mysql:host=localhost;dbname=soireeTest','root','');
+$db = new PDO('mysql:host=localhost;dbname=mosdot','root','');
 class myPDF extends fpdf{
     function header(){
         $this->SetFont('Arial','B',14);

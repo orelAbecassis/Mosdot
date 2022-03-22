@@ -80,7 +80,7 @@ include("entete.php") ;
   }
   if ($etape==2)
   {
-      include("../vues/vListerAdherent.php");
+      // include("../vues/vListerAdherent.php");
       include("../vues/vListerprostect.php");
   }
   include("footer.php");

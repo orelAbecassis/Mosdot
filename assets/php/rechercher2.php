@@ -49,7 +49,7 @@ include("entete.php") ;
   }
   if ($etape==2)
   {
-      include("../vues/vListerAdherent.php");
+      // include("../vues/vListerAdherent.php");
       include("../vues/vListerProspect.php");
   }
   ?>

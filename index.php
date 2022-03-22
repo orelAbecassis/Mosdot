@@ -55,9 +55,9 @@ https://templatemo.com/tm-548-training-studio
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="../../index.php" class="active">Accueil</a></li>
-                            <li class="scroll-to-section"><a href="assets/php/listeProspect.php">Prospects</a></li>
+                            <li class="scroll-to-section"><a href="assets/php/listeProspect.php">Participants</a></li>
                             <li class="scroll-to-section"><a href="assets/php/listerRecapDon.php"> Don</a></li>
-                            <li class="scroll-to-section"><a href="assets/php/listerAdherent.php">Adhérents</a></li>
+                            <!-- <li class="scroll-to-section"><a href="assets/php/listerAdherent.php">Adhérents</a></li> -->
                             <!-- <li class="scroll-to-section"><a href="rechercher.php">Rechercher</a></li> -->
                             <!-- <li class="scroll-to-section"><a href="ajouter.php">Ajouter Participant</a></li> -->
                             

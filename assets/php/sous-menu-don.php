@@ -33,13 +33,13 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <!-- <li class="scroll-to-section"><a href="../../index.php" class="active">Accueil</a></li> -->
-                            <li class="scroll-to-section"><a href=".././fpdf/test4.php"><img style = "position:relative;top:10px;"src="fax.png" alt=""></a></li>
+                            <!-- <li class="scroll-to-section"><a href=".././fpdf/test4.php"><img style = "position:relative;top:10px;"src="fax.png" alt=""></a></li> -->
                             <li class="scroll-to-section"><a href="rechercherDon.php">Rechercher</a></li>
                             <!-- <li class="scroll-to-section"><a href="ajouter-Dons.php">Ajouter </a></li> -->
                             <li class="scroll-to-section"><a href="supprimerDon.php">Supprimer</a></li>
-                            <li class="scroll-to-section"><a href="listeProspect.php">Prospects</a></li>
+                            <li class="scroll-to-section"><a href="listeProspect.php">Participants</a></li>
                             <li class="scroll-to-section"><a href="listerRecapDon.php"> Don</a></li>
-                            <li class="scroll-to-section"><a href="listerAdherent.php">Adhérents</a></li>
+                            <!-- <li class="scroll-to-section"><a href="listerAdherent.php">Adhérents</a></li> -->
                             <li class="scroll-to-section"><a href="../../index.php" class="active">Accueil</a></li>
 
                             

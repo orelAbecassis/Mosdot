@@ -43,43 +43,7 @@ function lister_donsEntier($info)
 }
 
 
-// //Afficher les info d'un don  
-// function lister_idDon($infos,$unIdDon)
-// {
-//   $connect=connexionBdd();  
-//   if (TRUE) 
-//   {
-      
-    
-//       $requete="SELECT don.idDon, participant.Nom, participant.Prenom , don.Libelle, don.typeDon, don.Montant, don.typeReglement, don.estRegle, don.dateReglement, don.commentaire from participant INNER JOIN don on participant.Id_part = don.Id_part where don.idDon=".$unIdDon.";";
-      
-      
-//       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
 
-//       $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-//       $i = 0;
-//       $ligne = $jeuResultat->fetch();
-//       while($ligne)
-//       {
-//           // echo($requete);
-    
-//           $info[$i]['Nom']=$ligne->Nom;
-//           $info[$i]['Prenom']=$ligne->Prenom;
-//           $info[$i]['Libelle']=$ligne->Libelle;
-//           $info[$i]['typeDon']=$ligne->typeDon;
-//           $info[$i]['Montant']=$ligne->Montant;
-//           $info[$i]['typeReglement']=$ligne->typeReglement;
-//           $info[$i]['estRegle']=$ligne->estRegle; 
-//           $info[$i]['dateReglement']=$ligne->dateReglement;
-//           $info[$i]['commentaire']=$ligne->commentaire;
-//           $ligne=$jeuResultat->fetch();
-//           $i = $i + 1;
-//       }
-//     }
-//     $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-//     // deconnecterServeurBD($idConnexion);
-//     return $info;
-// }
 
 
 //Afficher tout les dons une personne
@@ -132,7 +96,7 @@ function listerInvite($info)
   {
       
     
-      $requete="select * from participant where statut = 'invite'; ";
+      $requete="select * from participant ; ";
       
       
       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
@@ -176,55 +140,55 @@ function listerInvite($info)
 
 
 
-// La liste de tout les donateurs
-function listerDonateur($info)
-{
-  $connect=connexionBdd();  
-  if (TRUE) 
-  {
+// // La liste de tout les donateurs
+// function listerDonateur($info)
+// {
+//   $connect=connexionBdd();  
+//   if (TRUE) 
+//   {
       
     
-      $requete="SELECT don.idDon,participant.Nom,participant.Date_naissance,participant.Sexe,participant.Adresse,participant.Adresse1,participant.codePostal,participant.Ville,participant.Societe,participant.commentaire,participant.Pays,participant.Mobile,participant.Id_part, participant.Prenom , participant.Statut, don.Libelle, participant.Nom_Hebraique, participant.Nom_hebraique_Parents, participant.Email from participant INNER JOIN don on participant.Id_part = don.Id_part where participant.statut = 'donateur'and don.Libelle!='entree'; ";
+//       $requete="SELECT don.idDon,participant.Nom,participant.Date_naissance,participant.Sexe,participant.Adresse,participant.Adresse1,participant.codePostal,participant.Ville,participant.Societe,participant.commentaire,participant.Pays,participant.Mobile,participant.Id_part, participant.Prenom , participant.Statut, don.Libelle, participant.Nom_Hebraique, participant.Nom_hebraique_Parents, participant.Email from participant INNER JOIN don on participant.Id_part = don.Id_part where participant.statut = 'donateur'and don.Libelle!='entree'; ";
       
       
-      $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
+//       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
 
-      $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-      $i = 0;
-      $ligne = $jeuResultat->fetch();
-      while($ligne)
-      {
-          // echo($requete);
-          // $info[$i]['Id_part']=$ligne->Id_part;
-          $info[$i]['Id_part']=$ligne->Id_part;
-          $info[$i]['Statut']=$ligne->Statut;
-          $info[$i]['nom']=$ligne->Nom;
-          $info[$i]['prenom']=$ligne->Prenom;
-          $info[$i]['Nom_Hebraique']=$ligne->Nom_Hebraique;
-          $info[$i]['Nom_hebraique_Parents']=$ligne->Nom_hebraique_Parents;
-          $info[$i]['Email']=$ligne->Email;
-          $info[$i]['Date_naissance']=$ligne->Date_naissance;
-          $info[$i]['Sexe']=$ligne->Sexe;
-          $info[$i]['Adresse']=$ligne->Adresse;
-          $info[$i]['Adresse1']=$ligne->Adresse1;
-          $info[$i]['codePostal']=$ligne->codePostal;
-          $info[$i]['Ville']=$ligne->Ville;
-          $info[$i]['Pays']=$ligne->Pays;
-          $info[$i]['Mobile']=$ligne->Mobile;
-          $info[$i]['Societe']=$ligne->Societe;
-          $info[$i]['commentaire']=$ligne->commentaire;
+//       $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
+//       $i = 0;
+//       $ligne = $jeuResultat->fetch();
+//       while($ligne)
+//       {
+//           // echo($requete);
+//           // $info[$i]['Id_part']=$ligne->Id_part;
+//           $info[$i]['Id_part']=$ligne->Id_part;
+//           $info[$i]['Statut']=$ligne->Statut;
+//           $info[$i]['nom']=$ligne->Nom;
+//           $info[$i]['prenom']=$ligne->Prenom;
+//           $info[$i]['Nom_Hebraique']=$ligne->Nom_Hebraique;
+//           $info[$i]['Nom_hebraique_Parents']=$ligne->Nom_hebraique_Parents;
+//           $info[$i]['Email']=$ligne->Email;
+//           $info[$i]['Date_naissance']=$ligne->Date_naissance;
+//           $info[$i]['Sexe']=$ligne->Sexe;
+//           $info[$i]['Adresse']=$ligne->Adresse;
+//           $info[$i]['Adresse1']=$ligne->Adresse1;
+//           $info[$i]['codePostal']=$ligne->codePostal;
+//           $info[$i]['Ville']=$ligne->Ville;
+//           $info[$i]['Pays']=$ligne->Pays;
+//           $info[$i]['Mobile']=$ligne->Mobile;
+//           $info[$i]['Societe']=$ligne->Societe;
+//           $info[$i]['commentaire']=$ligne->commentaire;
           
-          $ligne=$jeuResultat->fetch();
-          $i = $i + 1;
+//           $ligne=$jeuResultat->fetch();
+//           $i = $i + 1;
           
-      }
+//       }
       
-    }
+//     }
   
-    $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-    // deconnecterServeurBD($idConnexion);
-    return $info;
-} 
+//     $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
+//     // deconnecterServeurBD($idConnexion);
+//     return $info;
+// } 
 
 
 function listerUser($id)
