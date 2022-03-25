@@ -10,26 +10,26 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Rechercher un Don: </span>
               <form id="stripe-login" name="rechercher" action="" method="post">
-                <div class="field padding-bottom--24">
-                  <label for="text">Nom</label>
+                <!-- <div class="field padding-bottom--24">
+                  <label for="text">Type de don</label>
                   <input type="text" name="nom">
                 </div>
                 <div class="field padding-bottom--24">
                   
-                </div>
+                </div> -->
             
                 <div class="field padding-bottom--24">
-                  <label for="text">Prénom</label>
-                  <input type="text" name="prenom">
+                  <label for="text">date de reglement</label>
+                  <input type="text" name="date">
                 </div>
                 <div class="field padding-bottom--24">
                   
                 </div>
               
-                <div class="field padding-bottom--24">
-                  <label for="text">Mail</label>
-                  <input type="text" name="mail">
-                </div>
+                <!-- <div class="field padding-bottom--24">
+                  <label for="text">Type reglement</label>
+                  <input type="text" name="reglement">
+                </div> -->
                 <div class="field padding-bottom--24">
                   <input type="submit"  value="Rechercher"> 
                 </div>

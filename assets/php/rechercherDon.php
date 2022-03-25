@@ -20,22 +20,17 @@ include("entete.php") ;
     {
     $info = $_POST['info'];
     }  
-    $nom=$_POST["nom"];
-    if($nom=='')
-    { 
-        $nom='0000';
-    }
-    $prenom=$_POST['prenom'];
-    if($prenom=='')
+
+
+    $date=$_POST['date'];
+    if($date=='')
     {
-        $prenom='0000';
+      $date='0000';
     }
-    $mail=$_POST['mail'];
-    if($mail=='')
-    {
-        $mail='0000';
-    }
-    $don= searchglobalDon($info,$nom,$prenom,$mail);
+
+  
+
+  $don= searchglobalDon($info,$date);
    
     //  var_dump($invite);
   }

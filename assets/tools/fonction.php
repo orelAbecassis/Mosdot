@@ -327,200 +327,15 @@ function listerIdDon($info,$unID)
 
 
 
-// //Une rechercher via le nom
-
-// function lister_search($info,$unNom)
-// {
-//   $connect=connexionBdd();  
-//   if (TRUE) 
-//   {
-      
-    
-//     $requete="select * from participant";
-//     $requete=$requete." where Nom = '".$unNom."';"; 
-//     // echo($requete);
-      
-      
-//       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
-
-//       $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-//       $i = 0;
-//       $ligne = $jeuResultat->fetch();
-//       while($ligne)
-//       {
-//         // $info[$i]['Id_part']=$ligne->Id_part;
-//         $info[$i]['Statut']=$ligne->Statut;  
-//         $info[$i]['nom']=$ligne->Nom;
-//         $info[$i]['prenom']=$ligne->Prenom;
-//         $info[$i]['Nom_Hebraique']=$ligne->Nom_Hebraique;
-//         $info[$i]['Nom_hebraique_Parents']=$ligne->Nom_hebraique_Parents;
-//         $info[$i]['Email']=$ligne->Email;
-//         $info[$i]['Date_naissance']=$ligne->Date_naissance;
-//         $info[$i]['Sexe']=$ligne->Sexe;
-//         $info[$i]['Adresse']=$ligne->Adresse;
-//         $info[$i]['Adresse1']=$ligne->Adresse1;
-//         $info[$i]['codePostal']=$ligne->codePostal;
-//         $info[$i]['Ville']=$ligne->Ville;
-//         $info[$i]['Pays']=$ligne->Pays;
-//         $info[$i]['Mobile']=$ligne->Mobile;
-//         $info[$i]['Societe']=$ligne->Societe;
-//         $info[$i]['Statut']=$ligne->Statut;
-//         $info[$i]['commentaire']=$ligne->commentaire;
-//           $ligne=$jeuResultat->fetch();
-//           $i = $i + 1;
-//           // echo"l'invite a bien ete ajoute";
-//       }
-//   }
-//     $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-//     // deconnecterServeurBD($idConnexion);
-//     return $info;
-// }
-
-// //Une rechercher via le prenom
-
-// function lister_searchPrenom($info,$unPrenom)
-// {
-//   $connect=connexionBdd();  
-//   if (TRUE) 
-//   {
-      
-    
-//     $requete="select * from participant";
-//     $requete=$requete." where prenom = '".$unPrenom."';"; 
-//     // echo($requete);
-      
-      
-//       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
-
-//       $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-//       $i = 0;
-//       $ligne = $jeuResultat->fetch();
-//       while($ligne)
-//       {
-//         // $info[$i]['Id_part']=$ligne->Id_part;
-//         $info[$i]['Statut']=$ligne->Statut;  
-//         $info[$i]['nom']=$ligne->Nom;
-//         $info[$i]['prenom']=$ligne->Prenom;
-//         $info[$i]['Nom_Hebraique']=$ligne->Nom_Hebraique;
-//         $info[$i]['Nom_hebraique_Parents']=$ligne->Nom_hebraique_Parents;
-//         $info[$i]['Email']=$ligne->Email;
-//         $info[$i]['Date_naissance']=$ligne->Date_naissance;
-//         $info[$i]['Sexe']=$ligne->Sexe;
-//         $info[$i]['Adresse']=$ligne->Adresse;
-//         $info[$i]['Adresse1']=$ligne->Adresse1;
-//         $info[$i]['codePostal']=$ligne->codePostal;
-//         $info[$i]['Ville']=$ligne->Ville;
-//         $info[$i]['Pays']=$ligne->Pays;
-//         $info[$i]['Mobile']=$ligne->Mobile;
-//         $info[$i]['Societe']=$ligne->Societe;
-//         $info[$i]['Statut']=$ligne->Statut;
-//         $info[$i]['commentaire']=$ligne->commentaire;
-//           $ligne=$jeuResultat->fetch();
-//           $i = $i + 1;
-//           // echo"l'invite a bien ete ajoute";
-//       }
-//   }
-//     $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-//     // deconnecterServeurBD($idConnexion);
-//     return $info;
-// }
-
-
-// //Une rechercher via la mail
-
-// function lister_searchMail($info,$unMail)
-// {
-//   $connect=connexionBdd();  
-//   if (TRUE) 
-//   {
-      
-    
-//     $requete="SELECT don.idDon, participant.Nom, participant.Prenom ,participant.email, don.Libelle, don.typeDon, don.Montant, don.typeReglement, don.estRegle, don.dateReglement, don.commentaire from participant INNER JOIN don on participant.Id_part = don.Id_part where participant.email=".$unMail.";";
-      
-      
-//     $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
-
-//     $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-//     $i = 0;
-//     $ligne = $jeuResultat->fetch();
-//     while($ligne)
-//     {
-//         // echo($requete);
-  
-//         $info[$i]['Nom']=$ligne->Nom;
-//         $info[$i]['Prenom']=$ligne->Prenom;
-//         $info[$i]['Email']=$ligne->Email;
-//         $info[$i]['Libelle']=$ligne->Libelle;
-//         $info[$i]['typeDon']=$ligne->typeDon;
-//         $info[$i]['Montant']=$ligne->Montant;
-//         $info[$i]['typeReglement']=$ligne->typeReglement;
-//         $info[$i]['estRegle']=$ligne->estRegle; 
-//         $info[$i]['dateReglement']=$ligne->dateReglement;
-//         $info[$i]['commentaire']=$ligne->commentaire;
-//         $ligne=$jeuResultat->fetch();
-//         $i = $i + 1;
-//     }
-//   }
-//   $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-//   // deconnecterServeurBD($idConnexion);
-//   return $info;
-// }
-// function searchglob($info,$unMail,$unPrenom,$unNom)
-// {
-//   $connect=connexionBdd();  
-//   if (TRUE) 
-//   {
-    
-    
-//     $requete="SELECT don.idDon,participant.Id_part,participant.Nom, participant.Prenom ,participant.email, don.Libelle, don.typeDon, don.Montant, don.typeReglement, don.estRegle, don.dateReglement, don.commentaire from participant INNER JOIN don on participant.Id_part = don.Id_part where participant.email ='".$unMail."' OR participant.Nom = '".$unNom."' OR participant.Prenom = '".$unPrenom."' ;";
-    
-
-//     $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
-//     echo $requete;
-  
-//     $jeuResultat->setFetchMode(PDO::FETCH_OBJ); // on dit qu'on veut que le resultat soit recuperable sous forme d'objet     
-//     $i = 0;
-//     $ligne = $jeuResultat->fetch();
-//     while($ligne)
-//     {
-//       $info[$i]['Id_part']=$ligne->Id_part;
-//       $info[$i]['Statut']=$ligne->Statut;
-//       $info[$i]['nom']=$ligne->Nom;
-//       $info[$i]['prenom']=$ligne->Prenom;
-//       $info[$i]['Nom_Hebraique']=$ligne->Nom_Hebraique;
-//       $info[$i]['Nom_hebraique_Parents']=$ligne->Nom_hebraique_Parents;
-//       $info[$i]['Email']=$ligne->Email;
-//       $info[$i]['Date_naissance']=$ligne->Date_naissance;
-//       $info[$i]['Sexe']=$ligne->Sexe;
-//       $info[$i]['Adresse']=$ligne->Adresse;
-//       $info[$i]['Adresse1']=$ligne->Adresse1;
-//       $info[$i]['codePostal']=$ligne->codePostal;
-//       $info[$i]['Ville']=$ligne->Ville;
-//       $info[$i]['Pays']=$ligne->Pays;
-//       $info[$i]['Mobile']=$ligne->Mobile;
-//       $info[$i]['Societe']=$ligne->Societe;
-//       $info[$i]['commentaire']=$ligne->commentaire;
-      
-//         $ligne=$jeuResultat->fetch();
-//         $i = $i + 1;
-//     }
-//   }
-//   $jeuResultat->closeCursor();   // fermer le jeu de r�sultat
-//   // deconnecterServeurBD($idConnexion);
-//   return $info;
-// }
-
-
-function searchglobal($info,$unNom,$unPrenom,$unMail)
+function searchglobal($info,$nom,$prenom,$mail)
 {
   $connect=connexionBdd();  
   if (TRUE) 
   {
       
     
-    $requete="select * from participant";
-    $requete=$requete." where Nom = '".$unNom."' OR  Prenom = '".$unPrenom."' OR Email = '".$unMail."';"; 
-    // echo($requete);
+    $requete="select * from participant  where Nom LIKE '".$nom."%' OR  Prenom LIKE '".$prenom."%' OR Email LIKE '".$mail."%';"; 
+     //echo($requete);
       
       
       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
@@ -560,16 +375,15 @@ function searchglobal($info,$unNom,$unPrenom,$unMail)
 
 
 
-function searchglobalDon($info,$unNom,$unPrenom,$unMail)
+function searchglobalDon($info,$date)
 {
   $connect=connexionBdd();  
   if (TRUE) 
   {
       
     
-    $requete="SELECT don.idDon, participant.Nom, participant.Prenom , participant.email, don.Libelle, don.typeDon, don.Montant, don.typeReglement, don.estRegle, don.dateReglement, don.commentaire from participant INNER JOIN don on participant.Id_part = don.Id_part";
-    $requete=$requete." where participant.Nom '".$unNom."' OR  participant.Prenom= '".$unPrenom."' OR participant.email = '".$unMail."';"; 
-    echo($requete);
+    $requete="SELECT don.idDon, participant.Nom, participant.Prenom , participant.email, don.Libelle, don.typeDon, don.Montant, don.typeReglement, don.estRegle, don.dateReglement, don.commentaire from participant INNER JOIN don on participant.Id_part = don.Id_part where   don.dateReglement ='".$date."'"; 
+    //echo($requete);
       
       
       $jeuResultat=$connect->query($requete); // on va chercher tous les membres de la table qu'on trie par ordre croissant
@@ -583,7 +397,7 @@ function searchglobalDon($info,$unNom,$unPrenom,$unMail)
           $info[$i]['idDon']=$ligne->idDon;
           $info[$i]['Nom']=$ligne->Nom;
           $info[$i]['Prenom']=$ligne->Prenom;
-          $info[$i]['Email']=$ligne->Mail;
+          $info[$i]['Email']=$ligne->email;
           $info[$i]['Libelle']=$ligne->Libelle;
           $info[$i]['typeDon']=$ligne->typeDon;
           $info[$i]['Montant']=$ligne->Montant;

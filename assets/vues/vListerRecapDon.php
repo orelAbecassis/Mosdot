@@ -55,7 +55,6 @@ if (count($don)>0)
             <td><?php echo $don[$i]["Libelle"]?></td>
             <td><?php echo $don[$i]["typeDon"]?></td>
             <td><?php echo $don[$i]["Montant"]?></td>
-        
             <td><?php echo $don[$i]["estRegle"]?></td>
             <td><?php echo $don[$i]["dateReglement"]?></td>
             <td><?php echo $don[$i]["commentaire"]?></td>
