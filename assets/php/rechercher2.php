@@ -35,16 +35,16 @@ include("entete.php") ;
     {
         $mail='0000';
     }
-    $invite= searchglobal($info,$nom,$prenom,$mail);
+    // $invite= searchglobal($info,$nom,$prenom,$mail);
 
-    // if($nom !=0 or $prenom !=0 or $mail !=0)
-    // {
-    //   echo"Cet invité n'existe pas !!!";
-    // }
-    // else
-    // {
-    //   $invite= searchglobal($info,$nom,$prenom,$mail);
-    // }
+    if($nom !=0 or $prenom !=0 or $mail !=0)
+    {
+      echo"Cet invité n'existe pas !!!";
+    }
+    else
+    {
+      $invite= searchglobal($info,$nom,$prenom,$mail);
+    }
     
     
    
