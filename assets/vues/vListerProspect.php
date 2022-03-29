@@ -8,7 +8,7 @@
     <table class="fl-table" class="table-wrapper">
        
     <!-- <li class="scroll-to-section"><a href="supprimer.php">Supprimer</a></li> -->
-  <br><br><br>
+
       <?php
 if(count($invite)>0)
 {
@@ -18,10 +18,10 @@ if(count($invite)>0)
 
 
 <div id="rechercher1">
-  <h2>Liste des Particpants</h2> 
+  <h2>Liste des Participants</h2> 
  
   </div>
-<br>
+
 
 <thead>
         <tr>
@@ -55,7 +55,7 @@ if(count($invite)>0)
             <td><?php echo $invite[$i]["nom"] ?></td>
             <td><?php echo $invite[$i]["prenom"]?></td>
             <td><?php echo $invite[$i]["Email"]?></td>
-            <td><a href='../php/modifier.php?ID=<?php echo$invite[$i]["Id_part"] ?>'>Modifier</a></td>
+            <td><a href='../php/modifier.php?ID=<?php echo $invite[$i]["Id_part"] ?>'>Modifier</a></td>
             <td><a href='../php/ajouter_Dons.php?ID=<?php echo $invite[$i]["Id_part"] ?>'>Ajouter</td>
             <td><a href='../php/supprimer.php?ID=<?php echo $invite[$i]["Id_part"] ?>'>Supprimer</td>
             

@@ -10,7 +10,7 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Entrez les coordonnées d'un invité pour l'ajouter :</span>
+              <span class="padding-bottom--15">Entrez les coordonnées d'un invite pour l'ajouter </span>
               <form class="formulaire" id="stripe-login" name="ajouter" action="" method="post">
               
               <div class="form-part">
@@ -35,7 +35,7 @@
 
               <div class="form-part">
                 <div class="field paddings-input">
-                    <label >Nom Hébraique des Parents</label>
+                    <label >Nom Hebraique des Parents</label>
                     <input type="text" name="nom_HP">
                 </div>
                 <div class="field paddings-input">

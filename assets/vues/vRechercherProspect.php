@@ -8,9 +8,7 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Entrez les coordonnées d'un participant </span>
-              <label for="text">(Vous pouvez effectuer plusieurs recherches)</label>
-              
+              <span class="padding-bottom--15">Entrez les coordonnés d'un ou plusieurs participants : </span>
               <form id="stripe-login" name="rechercher" action="" method="post">
                 <div class="field padding-bottom--24">
                   <label for="text">Nom</label>

@@ -30,13 +30,15 @@ include("sous-menu-don.php") ;
 
   
 
-  $don= searchglobalDon($info,$date);
+  $don= searchglobalDon($date);
   if(count($don)==0)
   {
-    echo '<script type="text/javascript"> alert("Cet date existe pas !")</script>';
+    echo '<script type="text/javascript"> alert("Cete date n\'existe pas !")</script>';
+    echo '<script type="text/javascript">window.location.replace("rechercherDon.php");</script>';
   }
-   
-    //  var_dump($invite);
+  else{
+    include("../vues/vListerRecapDon.php");
+  }
   }
   
 
@@ -47,11 +49,7 @@ include("sous-menu-don.php") ;
     include("../vues/vRechercherDons.php");
     // echo'salut';
   }
-  if ($etape==2)
-  {
-      include("../vues/vListerRecapDon.php");
-      // include("../vues/vListerProspect.php");
-  }
+  
   ?>
   <br>
   <br>

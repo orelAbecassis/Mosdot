@@ -1,34 +1,14 @@
 <?php
-
-
-$repVues="../vues/";
-include("../tools/fonction.php"); 
-
-    
+include("../tools/fonction.php");   
     if($_GET['ID']=="")
     {
-      $etape=1;
+      header('Location:listerRecapDon.php');
     }
     else
     {
-      $unIdDon=$_GET["ID"];
-      $nom=getnomdon($unIdDon);
-      $infos=array();
-      if(isset($_POST['infos']))
-      {
-        $infos=$_POST['infos'];
-        
-      }  
-      $invites=listerIDDONS($infos,$unIdDon);
-      if(count($invites)<=0)
-       {
-      $etape = 1;
-      }
-      else
-      {
-        $etape=2;
-      }
-      
+      $unIdDon=$_GET["ID"];   
+      $invites=listerIDDONS($unIdDon);
+      $nom = getnomdon($unIdDon);         
       if(count($_POST)>=6)
       {
         $etape = 3;
@@ -40,66 +20,13 @@ include("../tools/fonction.php");
         $unRegle=$_POST["typeReglement"];
         $unEstPaye=$_POST['estRegle'];
         $unDate=$_POST["date"];
-        $unCom=$_POST["com"];
-       
+        $unCom=$_POST["com"];  
         
         modifierDon($unIdDon,$unLibelle,$unType,$unMontant,$unRegle,$unEstPaye,$unDate,$unCom);
-        header('Location:listerRecapDon.php');
-        
-      }
-   
-      }
-
-
-      
-      
-    
-    
-  // }
-// }
-
-
-  
- 
-
-  
-
-$infoss=array();
-if (isset($_GET['ID']))
-{
-$infoss=$_GET['ID'];
-}  
-// $invite =listerUser($infoss);
-
-$don =  lister_dons($_GET['ID']);
-
-
-  
-  
-
-
+        header('Location:listerRecapDon.php');      
+      }  
+    }
+include('../vues/vModifierDon.php');     
 // D�but de l'affichage (les vues)
-
-include("entete.php");
-
-if($etape==3)
-{
-  
-  include("../vues/vlisterRecapDon.php");
-  
-}
-if($etape==1)
-{
-  include("../vues/vModifier1.php");
-  include("../vues/vLister_dons.php");
-  
-}
-if($etape==2)
-{
-  include("../vues/vModifier1.php");
-  include("../vues/vLister_dons.php");
-}
-
-
+include("sous-menu-don.php");
 ?>
-  

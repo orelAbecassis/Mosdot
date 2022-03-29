@@ -15,7 +15,7 @@ if (count($don)>0)
     // echo(count($don))
 ?>
 
-<br><br><br>
+
 
 <h2>Liste des Dons</h2>
 <br>
@@ -28,6 +28,7 @@ if (count($don)>0)
           <th>Libelle</th>
           <th>Type Don</th>
           <th>Montant </th>
+         
           <th>Statut Reglement</th>
           <th>Date du Reglement</th>
           <th>Commentaire</th>
@@ -60,8 +61,8 @@ if (count($don)>0)
             <td><?php echo $don[$i]["estRegle"]?></td>
             <td><?php echo $don[$i]["dateReglement"]?></td>
             <td><?php echo $don[$i]["commentaire"]?></td>
-            <td><a href='../php/modifierDon.php?ID=<?php echo $don[$i]["idDon"] ?>'>Modifier</a></td>
-            <td><a href='../php/supprimerDon.php?ID=<?php echo $don[$i]["idDon"] ?>'>Supprimer</a></td>
+            <td><a href='../php/modifierDon.php?ID="<?php echo $don[$i]["idDon"] ?>"'>Modifier</a></td>
+            <td><a href='../php/supprimerDon.php?ID="<?php echo $don[$i]["idDon"] ?>"'>Supprimer</a></td>
 
             
 

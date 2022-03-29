@@ -8,21 +8,13 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Entrez les Information du Don</span>
+              <span class="padding-bottom--15">Entrez les Information du Don <?php echo $nom[0]['Nom']." ".$nom[0]['Prenom']?></span>
               <form class="formulaire" id="stripe-login" name="ajouter" action="" method="post">
              
               <div class="form-part">
                   <div class="field paddings-input">
-                      <label >Nom</label>
-                      <input type="text" name="nom" size="20" value="<?php  echo $don['Libelle']; ?>" /> <br />
-                  </div>
-                  <div class="field paddings-input">
-                      <label >Prénom</label>
-                      <input type="text" name="prenom" size="10"  value="<?php  echo $don['prenom']; ?>"/><br /> 
-                  </div>
-                  <div class="field paddings-input">
                     <label >Libelle</label>
-                    <input type="text" name="Libelle" value="<?php  echo $don['Libelle']; ?>">
+                    <input type="text" name="Libelle" value="<?php  echo $invites[0]['Libelle']; ?>">
                   </div>
                 
                   <div class="paddings-input">
@@ -46,23 +38,23 @@
               <div class="form-part">
                 <div class="field paddings-input">
                   <label required >Montant du Reglement</label>
-                  <input  name="paiement" value="<?php   echo $don['Montant']; ?>" required>
+                  <input  name="montant" value="<?php   echo $invites[0]['Montant']; ?>" required>
                 </div>
                 <div class="paddings-input">
                 <label>Etats du Reglement:</label> 
-                <input name="estRegle" type="radio" value="Payé" checked="checked">Payé
-                <input name="estRegle" type="radio" value="Impayé">Impayé
+                <input name="estRegle" type="radio" value="Payer" checked="checked">Payer
+                <input name="estRegle" type="radio" value="Impayer">Impayer
                 </div>
                 <div class="field paddings-input">
                   <label >Date du Reglement</label>
-                  <input id="changemoi" type="date" value="<?php   echo $don['date']; ?>">
+                  <input  type="date" name="date" value="<?php   echo $invites[0]['date']; ?>">
                 </div>
               </div>
 
               <div class="form-part">
                 <div class="field paddings-input">
                   <label >Commentaire</label>
-                  <input type="text" name="com" value="<?php  echo $don['commentaire']; ?>">
+                  <input type="text" name="com" value="<?php  echo $invites[0]['commentaire']; ?>">
                 </div>
                 
                 <div class="field paddings-input">
@@ -80,3 +72,4 @@
 </body>
 
 </html>
+<script></script>

@@ -1,20 +1,14 @@
 <?php
-
-
-
-
-include("entete.php") ;
+include("sous-menu-don.php") ;
 include("../tools/fonction.php");
 $don =  lister_dons($_GET['ID']);
-$nom=getnom($_GET['ID']);
-
+$nom = getnom($_GET['ID']);
 if (count($_POST)==0)
 {
-  $etape = 1;
+  include('../vues/vAjouter_Dons.php');
 }
 else
 {
-  
   $etape = 2;
   $unLibelle=$_POST['Libelle'];
   $unIdpart=$_GET['ID'];
@@ -25,11 +19,7 @@ else
   $dateReg=$_POST['date'];
   $comm=$_POST['com'];
   ajouter_dons($unIdpart,$unLibelle,$untypeDons, $unMontant,$unTypeReg,$estRegle,$dateReg,$comm);
-  header('location:listerRecapDon.php');
-  
+  header('Location:listerRecapDon.php') ;
 }
-
-
-include("../vues/vAjouter_Dons.php");
-include("../vues/vLister_dons.php");
 include("footer.php");
+?>
