@@ -19,7 +19,7 @@
                 </div> -->
             
                 <div class="field padding-bottom--24">
-                  <label for="text">date de reglement</label>
+                  <label for="text">date de reglement (Ex: 2002-03-30)</label>
                   <input type="text" name="date">
                 </div>
                 <div class="field padding-bottom--24">

@@ -10,7 +10,7 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Entrez les Information du Don</span>
+              <span class="padding-bottom--15">Entrez les Information du Don <?php echo $nom[0]['Nom']." ".$nom[0]['Prenom']?></span>
               <form class="formulaire" id="stripe-login" name="ajouter" action="" method="post">
              
               <div class="form-part">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="field paddings-input">
                   <label >Date du Reglement</label>
-                  <input  type="date" name="date" >
+                  <input  type="date" name="date" required >
                 </div>
               </div>
 

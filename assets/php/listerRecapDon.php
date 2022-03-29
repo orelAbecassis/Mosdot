@@ -1,7 +1,5 @@
 <?php
 
-
-
 include("sous-menu-don.php");
 include("../tools/fonction.php");
 
@@ -13,14 +11,7 @@ include("../tools/fonction.php");
 
   $don =  lister_donsEntier($info);
 
-  // count(array($don));
-  
-  
-  // var_dump($don);
- 
-//   include($repVues."menu.php") ;
   include("../vues/vListerRecapDon.php");
-  // include("footer.php") ;
   include("footer.php");
   ?>                             
     

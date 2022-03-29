@@ -14,7 +14,7 @@
               <div class="form-part">
                   <div class="field paddings-input">
                       <label >Nom</label>
-                      <input type="text" name="nom" size="20" value="<?php  echo $don['nom']; ?>" /> <br />
+                      <input type="text" name="nom" size="20" value="<?php  echo $don['Libelle']; ?>" /> <br />
                   </div>
                   <div class="field paddings-input">
                       <label >Prénom</label>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="paddings-input">
                 <label>Etats du Reglement:</label> 
-                <input name="estRegle" type="radio" value="Payer" checked="checked">Payer
-                <input name="estRegle" type="radio" value="Impayer">Impayer
+                <input name="estRegle" type="radio" value="Payé" checked="checked">Payé
+                <input name="estRegle" type="radio" value="Impayé">Impayé
                 </div>
                 <div class="field paddings-input">
                   <label >Date du Reglement</label>

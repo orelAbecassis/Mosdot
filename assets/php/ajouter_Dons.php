@@ -6,6 +6,7 @@
 include("entete.php") ;
 include("../tools/fonction.php");
 $don =  lister_dons($_GET['ID']);
+$nom=getnom($_GET['ID']);
 
 if (count($_POST)==0)
 {
@@ -24,6 +25,7 @@ else
   $dateReg=$_POST['date'];
   $comm=$_POST['com'];
   ajouter_dons($unIdpart,$unLibelle,$untypeDons, $unMontant,$unTypeReg,$estRegle,$dateReg,$comm);
+  header('location:listerRecapDon.php');
   
 }
 

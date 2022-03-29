@@ -3,7 +3,7 @@
 
 
 
-include("entete.php") ;
+include("sous-menu-don.php") ;
     include("../tools/fonction.php"); 
     
 // DEBUT du contrôleur lister.php cest bon???
@@ -31,6 +31,10 @@ include("entete.php") ;
   
 
   $don= searchglobalDon($info,$date);
+  if(count($don)==0)
+  {
+    echo '<script type="text/javascript"> alert("Cet date existe pas !")</script>';
+  }
    
     //  var_dump($invite);
   }

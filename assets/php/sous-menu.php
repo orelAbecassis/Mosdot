@@ -36,7 +36,7 @@
                         
                             <li class="scroll-to-section"><a href="rechercher2.php">Rechercher</a></li>
                             <li class="scroll-to-section"><a href="ajouter.php">Ajouter </a></li>
-                            <li class="scroll-to-section"><a href="supprimer.php">Supprimer</a></li>
+                            <!-- <li class="scroll-to-section"><a href="supprimer.php">Supprimer</a></li> -->
                             <li class="scroll-to-section"><a href="listeProspect.php">Participants</a></li>
                             <li class="scroll-to-section"><a href="listerRecapDon.php"> Don</a></li>
                             <!-- <li class="scroll-to-section"><a href="listerAdherent.php">Adhérents</a></li> -->

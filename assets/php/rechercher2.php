@@ -3,7 +3,7 @@
 
 
 
-include("entete.php") ;
+include("sous-menu.php") ;
     include("../tools/fonction.php"); 
     
 // DEBUT du contrôleur lister.php
@@ -35,20 +35,14 @@ include("entete.php") ;
     {
         $mail='0000';
     }
-    // $invite= searchglobal($info,$nom,$prenom,$mail);
-
-    if($nom !=0 or $prenom !=0 or $mail !=0)
+    $invite= searchglobal($info,$nom,$prenom,$mail);
+    if (count($invite)==0)
     {
-      echo"Cet invité n'existe pas !!!";
-    }
-    else
-    {
-      $invite= searchglobal($info,$nom,$prenom,$mail);
-    }
-    
-    
-   
      
+    //  header('location:rechercher2.php');
+     echo '<script type="text/javascript"> alert("Cet invité existe pas !")</script>';
+    }
+
   }
   
 
@@ -58,11 +52,15 @@ include("entete.php") ;
   {
     include("../vues/vRechercher2.php");
   }
+
+ 
   if ($etape==2)
   {
       // include("../vues/vListerAdherent.php");
       include("../vues/vListerProspect.php");
   }
+
+ 
   ?>
   <br>
   <br>

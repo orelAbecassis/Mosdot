@@ -12,13 +12,14 @@ include("../tools/fonction.php");
     else
     {
       $unIdDon=$_GET["ID"];
+      $nom=getnomdon($unIdDon);
       $infos=array();
       if(isset($_POST['infos']))
       {
         $infos=$_POST['infos'];
         
       }  
-      $invites=lister_idDon($infos,$unIdDon);
+      $invites=listerIDDONS($infos,$unIdDon);
       if(count($invites)<=0)
        {
       $etape = 1;
@@ -43,6 +44,7 @@ include("../tools/fonction.php");
        
         
         modifierDon($unIdDon,$unLibelle,$unType,$unMontant,$unRegle,$unEstPaye,$unDate,$unCom);
+        header('Location:listerRecapDon.php');
         
       }
    
@@ -67,9 +69,10 @@ if (isset($_GET['ID']))
 {
 $infoss=$_GET['ID'];
 }  
-$invite =listerUser($infoss);
+// $invite =listerUser($infoss);
 
 $don =  lister_dons($_GET['ID']);
+
 
   
   

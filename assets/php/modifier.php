@@ -54,7 +54,7 @@ include("../tools/fonction.php");
         $unPay=$_POST["Pays"];
         $unCom=$_POST["com"];
         modifier($unIDD,$unStatut,$unNom,$unPrenom,$unNomHebraique,$unNomHP,$unEmail,$uneDate,$unSexe,$uneAdresse,$uneAdresse1,$unCp,$uneVille,$unPay,$unMobile,$uneSociete,$unCom);
-        header("Location:lister.php");
+        header("Location: listeProspect.php");
       }
    
       }

@@ -3,7 +3,7 @@
 
 
 
-include("entete.php") ;
+include("sous-menu.php") ;
 include("../tools/fonction.php");
 
 
@@ -85,6 +85,7 @@ else
    
   ajouter($unStatut,$unNom,$unPrenom,$unNomHebraique,$unNomHP,$unEmail,$uneDate,$unSexe,$uneAdresse,$uneAdresse1,$unCp,$uneVille,$unPays,$unMobile,$uneSociete,$unCom);
     // echo'ajoute';
+    header('location:listeProspect.php');
     
   } 
 

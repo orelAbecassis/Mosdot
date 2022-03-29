@@ -8,7 +8,7 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Entrez les Information du Don</span>
+              <span class="padding-bottom--15">Entrez les Information du Don pour <?php echo $nom[0]['Nom']." ".$nom[0]['Prenom']?></span>
               <form class="formulaire" id="stripe-login" name="ajouter" action="" method="post">
              
               <div class="form-part">
@@ -42,8 +42,8 @@
                 </div>
                 <div class="paddings-input">
                 <label>Etats du Reglement:</label> 
-                <input name="estRegle" type="radio" value="Payer" checked="checked">Payer
-                <input name="estRegle" type="radio" value="Impayer">Impayer
+                <input name="estRegle" type="radio" value="Payé" checked="checked">Payé
+                <input name="estRegle" type="radio" value="Impayé">Impayé
                 </div>
                 <div class="field paddings-input">
                   <label >Date du Reglement</label>

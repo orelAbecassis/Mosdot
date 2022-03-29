@@ -8,14 +8,14 @@
     <table class="fl-table" class="table-wrapper">
        
     <!-- <li class="scroll-to-section"><a href="supprimer.php">Supprimer</a></li> -->
-
+  <br><br><br>
       <?php
-if (count($invite)>0)
+if(count($invite)>0)
 {
-    // echo(count($invite))
+   
 ?>
 
-<br><br><br>
+
 
 <div id="rechercher1">
   <h2>Liste des Particpants</h2> 
@@ -25,12 +25,13 @@ if (count($invite)>0)
 
 <thead>
         <tr>
-          <th>Type</th>
+          <th>Types</th>
           <th>Nom</th>
           <th>Prénom</th>
           <th>Email</th>
           <th>Modifier</th>
           <th>ajouter Don</th>
+          <th>Supprimer</th>
           
        
         </tr>
@@ -49,13 +50,14 @@ if (count($invite)>0)
         
  ?>     
         <tr>
-            x²
+            
             <td><?php echo $invite[$i]["Statut"] ?></td>
             <td><?php echo $invite[$i]["nom"] ?></td>
             <td><?php echo $invite[$i]["prenom"]?></td>
             <td><?php echo $invite[$i]["Email"]?></td>
-            <td><a href='../php/modifier.php?ID=" <?php echo $invite[$i]["Id_part"] ?>"'>Modifier</a></td>
-            <td><a href='../php/ajouter_Dons.php?ID="<?php echo $invite[$i]["Id_part"] ?>"'>Ajouter</td>
+            <td><a href='../php/modifier.php?ID=<?php echo$invite[$i]["Id_part"] ?>'>Modifier</a></td>
+            <td><a href='../php/ajouter_Dons.php?ID=<?php echo $invite[$i]["Id_part"] ?>'>Ajouter</td>
+            <td><a href='../php/supprimer.php?ID=<?php echo $invite[$i]["Id_part"] ?>'>Supprimer</td>
             
        
 <?php

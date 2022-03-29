@@ -21,17 +21,18 @@ if (count($don)>0)
 <br>
 <thead>
         <tr>
+          <th>ID</th>
           <th>Nom</th>
           <th>Prenom</th> 
           <th>Mail</th>
           <th>Libelle</th>
           <th>Type Don</th>
           <th>Montant </th>
-         
           <th>Statut Reglement</th>
           <th>Date du Reglement</th>
           <th>Commentaire</th>
           <th>Modifier</th>
+          <th>Supprimer</th>
        
         </tr>
         </thead>
@@ -49,6 +50,7 @@ if (count($don)>0)
         
  ?>     
         <tr>
+            <td><?php echo $don[$i]["idDon"]?></td> 
             <td><?php echo $don[$i]["Nom"]?></td> 
             <td><?php echo $don[$i]["Prenom"] ?></td>
             <td><?php echo $don[$i]["Email"]?></td>
@@ -58,7 +60,9 @@ if (count($don)>0)
             <td><?php echo $don[$i]["estRegle"]?></td>
             <td><?php echo $don[$i]["dateReglement"]?></td>
             <td><?php echo $don[$i]["commentaire"]?></td>
-            <td><a href='../php/modifierDon.php?ID=" <?php echo $don[$i]["idDon"] ?>"'>Modifier</a></td>
+            <td><a href='../php/modifierDon.php?ID=<?php echo $don[$i]["idDon"] ?>'>Modifier</a></td>
+            <td><a href='../php/supprimerDon.php?ID=<?php echo $don[$i]["idDon"] ?>'>Supprimer</a></td>
+
             
 
             
