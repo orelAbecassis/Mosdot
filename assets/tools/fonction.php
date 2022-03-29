@@ -295,7 +295,7 @@ function supprimerInvite2($info)
   {
       
         // $a= date('d-m-y');
-      $requete="delete from participant where id_part= $info;";
+        $requete="SET FOREIGN_KEY_CHECKS = 0; delete from participant  where id_part='".$info."';";
        
       $jeuResultat=$connexion->query($requete);
       echo $requete;
